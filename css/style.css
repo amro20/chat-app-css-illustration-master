@@ -1,0 +1,197 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(270, 20%, 96%);
+}
+body::before {
+  border-bottom-left-radius: 213px;
+  content: "";
+  border-bottom-right-radius: 213px;
+  background-image: linear-gradient( to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%) );
+  width: 444px;
+  height: 670px;
+  position: absolute;
+  left: -64px;
+  z-index: -1;
+}
+body::after {
+  content: "";
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  /* position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%); */
+}
+.phone {
+  width: 270px;
+  height: 580px;
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 10px solid white;
+}
+.phone .head_phone {
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  position: relative;
+  height: 70px;
+}
+.phone .head_phone::after {
+  content: "";
+  width: 150px;
+  height: 20px;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.phone .head_phone i {
+  font-size: 16px;
+  color: white;
+}
+.phone .head_phone i:nth-child(1) {
+  transform: translate(10px, 24px);
+}
+.phone .head_phone i:nth-child(2) {
+  transform: translate(219px, 24px);
+}
+.phone .head_phone img {
+  width: 25px;
+  border-radius: 50%;
+  transform: translate(5px, 30px);
+  border: 1px solid white;
+}
+.phone .head_phone h5 {
+  color: white;
+  font-weight: normal;
+  text-indent: 65px;
+  margin-bottom: 3px;
+}
+.phone .head_phone p {
+  color: hsl(270, 7%, 64%);
+  font-size: 12px;
+  text-indent: 65px;
+}
+.phone .chat {
+  padding: 15px 10px;
+}
+.phone .chat .chat_left {
+  background-color: hsl(206deg 5% 86%);
+  color: hsl(276, 55%, 52%);
+  border-radius: 10px 10px 10px 0;
+  padding: 10px;
+  font-size: 11px;
+  width: 73%;
+  margin-bottom: 10px;
+}
+.phone .chat div.images {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 20px 0 10px;
+}
+.phone .chat div.images img {
+  max-width: 100%;
+  width: 50px;
+  border-radius: 15px;
+}
+.phone .chat .chat_right {
+  background-color: white;
+  color: hsl(271, 15%, 43%);
+  border-radius: 10px 10px 0 10px;
+  padding: 10px;
+  font-size: 11px;
+  width: 75%;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+.phone .chat .price {
+  background-image: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  width: 75%;
+  border-radius: 10px 10px 10px 0;
+  height: 35px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-evenly;
+  color: hsl(270deg 23% 87%);
+  align-items: center;
+  position: relative;
+}
+.phone .chat .price::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #dddada;
+}
+.phone .chat .price span {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+.phone .chat input {
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+  position: relative;
+}
+input[placeholder] {
+  color: hsl(206, 6%, 79%);
+  font-size: 14px;
+}
+.text{
+  width: 500px
+}
+.text h1 {
+  color: hsl(271, 36%, 24%);
+}
+.text p {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.7;
+  width: 450px;
+}
+@media ( max-width:768px){
+  main{
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  }
+  .text{
+    text-align: center;
+  }
+  .text h1{
+    margin-bottom: 11px;
+  }
+  .text p{
+    line-height: 1.5;
+    width: 305px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body::before {
+    width: 260px;
+    height: 450px;
+  }
+}
